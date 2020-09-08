@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
-* Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss/29/user/154481).
-* Наставник: `Неизвестно`.
+* Студент: [Мария Макарова](https://up.htmlacademy.ru/htmlcss/29/user/154481).
+* Наставник: [Никита Сигов](https://htmlacademy.ru/profile/crazer).
 
 ---
 
