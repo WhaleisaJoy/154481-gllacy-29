@@ -5,6 +5,7 @@
     --basic-gray-dark: #323232;
     --basic-gray: #5A5A5A;
     --basic-gray-light: #999999;
+    --basic-gray-extra-light: #ABABAB;
     --basic-light: #F8F7F4;
     --basic-extra-light: #EDEDED;
 
@@ -38,7 +39,7 @@ body{
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
-    color: var(--basic-gray-dark);
+    color: var(--basic-white);
     background-color: var(--basic-gray-red);
 }
 
@@ -55,11 +56,13 @@ img{
 /* modal */
 .modal{
     background-color: var(--basic-light);
+    color: var(--basic-gray-dark);
 }
 
 /* popup */
 .popup{
     background-color: var(--basic-white);
+    color: var(--basic-gray-dark);
 }
 
 /* button */
@@ -168,8 +171,11 @@ img{
     line-height: 15px;
 }
 
-.cart-list{
+.popup-cart{
     color: var(--basic-gray-dark);
+}
+
+.cart-list{   
     font-size: 13px;
     line-height: 16px; 
 }
@@ -177,6 +183,10 @@ img{
 .cart-item a{
     color: var(--basic-gray-dark);
     text-decoration: none;
+}
+
+.price-per-kg{
+    color: var(--basic-gray-extra-light);
 }
 
 .final-price{
@@ -191,7 +201,6 @@ img{
 }
 
 .site-info-wrapper{
-    color: var(--basic-white);
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -209,7 +218,6 @@ img{
 }
 
 .slider-text{
-    color: var(--basic-white);
     font-weight: 700;
     font-size: 60px;
     line-height: 60px;
@@ -227,7 +235,6 @@ img{
 /* promo */
 .promo-list{
     list-style: none;
-    color: var(--basic-white);
 }
 
 .promo-item{
@@ -249,7 +256,6 @@ img{
 /* hits */
 .hits-list{
     list-style: none;
-    color: var(--basic-white);
 }
 
 .hits-title{
@@ -277,6 +283,7 @@ img{
 /* features */
 .features{
     background-color: var(--basic-beige);
+    color: var(--basic-gray-dark);
 }
 
 .features-title{
@@ -292,6 +299,7 @@ img{
 /* news */
 .news{
     background-color: var(--basic-white);
+    color: var(--basic-gray-dark);
 }
 
 .news-title{
@@ -308,9 +316,14 @@ img{
 /* appointment */
 .appointment{
     background-color: var(--basic-light);
+    color: var(--basic-gray);
 }
 
 /* contacts */
+.contacts{
+    color: var(--basic-gray-dark);
+}
+
 .contacts-info{
     background-color: var(--basic-white);
 }
@@ -328,13 +341,73 @@ img{
     text-decoration: none;
 }
 
-/* footer */
-.main-footer, .social-button{
-    color: var(--basic-white);
+/* page catalog */
+.page-title{
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 41px;
 }
 
+/* breadcrumbs */
+.breadcrumbs{
+    list-style: none;
+}
+
+/* catalog list */
+.catalog-list{
+    list-style: none;
+}
+
+.catalog-item a{
+    color: var(--basic-white);
+    text-align: center;
+}
+
+.catalog-item h3{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.catalog-item-price{
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.catalog-item-price span{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+/* catalog pagination */
+.catalog-pagination-list{
+    list-style: none;
+}
+
+.catalog-pagination-item a{
+    color: var(--basic-white);
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.catalog-pagination-item a:hover{
+    background-color: var(--basic-white-transparent-light);
+}
+
+.catalog-pagination-item.current a{
+    background-color: var(--basic-white);
+    color: var(--basic-gray-dark);
+    cursor: default;
+}
+
+/* main footer */
 .footer-socials ul{
     list-style: none;
+}
+
+.social-button{
+    color: var(--basic-white);
 }
 
 .footer-additional a{
