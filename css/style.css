@@ -82,6 +82,7 @@ img{
 .main-nav-top{
     display: grid;
     grid-template-columns: 154px 1fr min-content;
+    align-items: center;
 }
 
 .main-nav-bottom{
@@ -175,7 +176,14 @@ img{
     text-decoration: none;
 }
 
+.site-nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .site-nav-item > a{
+    display: block;
+    padding: 9px 14px 11px;
     font-weight: 700;
     font-size: 16px;
     line-height: 18px; 
@@ -402,11 +410,16 @@ img{
     margin-bottom: 40px;
     padding: 24px 20px;
     background-color: var(--basic-beige);
+    background-image: url(../img/pattern-wafer.jpg);
+    background-position: 0 0;
+    background-repeat: repeat;
     color: var(--basic-gray-dark);
-    border-radius: 16px;
+    border-radius: 16px; 
 }
 
 .features-title{
+    margin: 0;
+    padding: 0;
     font-weight: 500;
     font-size: 24px;
     line-height: 30px;
@@ -422,6 +435,9 @@ img{
 .news{
     padding: 23px 20px;
     background-color: var(--basic-white);
+    background-image: url(../img/news-background.jpg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
     color: var(--basic-gray-dark);
     border-radius: 16px;
 }
@@ -483,7 +499,14 @@ img{
 }
 
 /* page catalog */
+.page-catalog{
+    display: grid;
+}
+
 .page-title{
+    margin: 0;
+    margin-bottom: 29px;
+    padding: 0;
     font-weight: 700;
     font-size: 35px;
     line-height: 41px;
@@ -491,16 +514,23 @@ img{
 
 /* breadcrumbs */
 .breadcrumbs{
+    order: -1;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
 /* catalog list */
+.catalog{
+    margin-bottom: 80px;
+}
+
 .catalog-list{
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0; 
+    list-style: none;
 }
 
 .catalog-item a{
@@ -529,8 +559,14 @@ img{
     line-height: 35px;
 }
 
+.catalog-item .button{
+    display: none;
+}
+
 /* catalog pagination */
 .catalog-pagination-list{
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
