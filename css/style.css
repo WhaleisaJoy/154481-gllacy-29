@@ -290,7 +290,7 @@ img{
 }
 
 .site-nav a, 
-.search, .login-link, .cart, 
+.user-wrapper-item-button, 
 .cart-list > a, 
 .site-info-phone{
     color: var(--basic-white);
@@ -314,8 +314,9 @@ img{
     text-decoration-color: var(--basic-white-transparent-light);
 }
 
-.site-nav-item > a:hover,
+.site-nav-item:hover > a,
 .site-nav-item > a:active,
+.site-nav-item > a:focus,
 .site-nav-item.current > a{
     text-decoration: none;
 } 
@@ -325,7 +326,7 @@ img{
     color: var(--basic-white);
 }
 
-.site-nav-item > a:hover{
+.site-nav-item:hover > a{
     background-color: var(--basic-white);
     color: var(--basic-gray-dark);
 }
@@ -337,25 +338,12 @@ img{
 
 .menu-catalog{
     position: relative;
+    padding-bottom: 5px;
 }
 
-.menu-catalog.open > a{
-    background-color: var(--basic-white);
-    color: var(--basic-gray-dark);
-}
-
-/* .menu-catalog.open > a{
-    background-color: var(--basic-white);
-    color: var(--basic-gray-dark);
-}
-
-.menu-catalog.open .submenu-catalog{
+.menu-catalog:hover > .popup{
     display: block;
 }
-
-.submenu-catalog.open{
-    display: block;
-} */
 
 .submenu-catalog{
     position: absolute;
@@ -424,11 +412,12 @@ img{
     gap: 10px;
 }
 
-.search-wrapper, .login-wrapper, .cart-wrapper{
+.user-wrapper-item{
     position: relative;
+    padding-bottom: 5px;
 }
 
-.search, .login-link, .cart{
+.user-wrapper-item-button{
     display: flex;
     align-items: center;
     height: 32px;
@@ -450,16 +439,24 @@ img{
     margin-right: 8px; 
 }
 
-.user-wrapper-button:hover, .user-wrapper-button.open,
+.user-wrapper-item:hover > a,
 .cart.filled{
     background-color: var(--basic-white);
     color: var(--basic-gray-dark);
 }
 
-.user-wrapper-button:not(.cart):hover path, .user-wrapper-button:not(.cart).open path,
-.cart:hover path:not(.cart-icon-content), .cart.open path:not(.cart-icon-content),
+.user-wrapper-item:not(.cart-wrapper):hover path,
+.cart-wrapper:hover path:not(.cart-icon-content),
 .cart.filled path:not(.cart-icon-content){
     fill: var(--basic-gray-dark);
+}
+
+.user-wrapper-item:hover > .popup{
+    display: block;
+}
+
+.cart-wrapper:hover > .popup{
+    display: flex;
 }
 
 .cart.filled path.cart-icon-content{
@@ -1010,16 +1007,21 @@ img{
 
 /* contacts */
 .contacts{
+    position: relative;
     color: var(--basic-gray-dark);
 }
 
-.contacts-map{
-    position: relative;
+.contacts img,
+.contacts iframe{
+    display: block;
 }
 
-.contacts-map img,
-.contacts-map iframe{
-    display: block;
+.contacts-info-wrapper{
+    height: 430px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .contacts-info{
@@ -1139,16 +1141,43 @@ img{
     padding-bottom: 9px;
 }
 
+.filter-select-wrapper{
+    position: relative;
+}
+
+.filter-select-wrapper::before{
+    content: "";
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 14px;
+    border: 5px solid transparent;
+    border-top: 10px solid var(--basic-white);
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.filter-select-wrapper:hover::before{
+    border-top-color: var(--basic-gray-dark);
+}
+
+.filter-select-wrapper:hover .filter-select{
+    color: var(--basic-gray-dark);
+}
+
 .filter-select{
-    padding: 7px 17px 8px 12px;
+    padding: 8px 34px 10px 17px;
     color: var(--basic-white);
     background-color: var(--basic-white-transparent-light);
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    appearance: none;
 }
 
-.filter-select:hover{
+.filter-select option{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
     color: var(--basic-gray-dark);
 }
 
@@ -1193,13 +1222,6 @@ img{
 
 .filter-range .toggle:hover{
     transform: scale(1.1);
-}
-
-.filter-select option{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--basic-gray-dark);
 }
 
 .catalog-filter-form ul{
@@ -1249,8 +1271,8 @@ img{
     opacity: 0.8;
 }
 
-.filter-input-radio + label:hover::before,
-.filter-input-radio + label:hover::after{
+.filter-input-radio:hover + label::before,
+.filter-input-radio:hover + label::after{
     opacity: 1;
 }
 
@@ -1273,6 +1295,12 @@ img{
 
 .filter-input-checkbox + label:hover::before{
     opacity: 1;
+}
+
+.filter-input:focus + label::before{
+    opacity: 1;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
 }
 
 .filter-button{
